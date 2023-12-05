@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<deportistas>
+ <deportista>
+   <deporte>
+        <tipo>Atletismo</tipo>
+        <nombre>Jesse Owens</nombre>
+   </deporte>
+ </deportista>
+ <deportista>
+   <deporte>
+        <tipo>Natación</tipo>
+        <nombre>Mark Spitz</nombre>
+   </deporte>
+ </deportista>
+</deportistas>
+

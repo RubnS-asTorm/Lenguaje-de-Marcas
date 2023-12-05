@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<DAW>
+    <fecha dias="5 de septiembre de 2019 y el 30 de junio de 2020"/>
+    <alumnos>
+        <primero nombre="Ana Fernández Gutiérrez" dni="16965696L" teléfono="789654321" correo="ana.fdezgtrrez@hotmail.com" dirección="r/El Percebe, 13” de Santander y CP 39302"/>
+            <notas datos="No hay información sobre las faltas de asistencia o sus notas de momento."/>
+        <segundo nombre="Pepe Pérez" dni="98765432H" teléfono="656566555" correo="yhyh@yahoo.com" dirección="Avda. El Pez, 5” de Suances, con CP 39401"/>
+            <notas datos="apto y no tiene faltas de asistencia."/>
+    </alumnos>
+</DAW>

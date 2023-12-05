@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg[
+<!ELEMENT svg (rect*,circle*,path*,line*,polyline*,polygon*,ellipse*)>
+<!ATTLIST svg
+        version CDATA #REQUIRED
+        width CDATA #REQUIRED
+        height CDATA #REQUIRED>
+<!ELEMENT rect EMPTY>
+<!ATTLIST rect 
+        x CDATA #REQUIRED
+        y CDATA #REQUIRED
+        width CDATA #REQUIRED
+        height CDATA #REQUIRED
+        fill CDATA #REQUIRED
+        stroke CDATA #REQUIRED
+        stroke-width CDATA #REQUIRED>
+<!ELEMENT circle EMPTY>
+<!ATTLIST circle
+        cx CDATA #REQUIRED
+        cy CDATA #REQUIRED
+        r CDATA #REQUIRED
+        fill CDATA #REQUIRED
+        stroke CDATA #REQUIRED>
+<!ELEMENT path EMPTY>
+<!ATTLIST path
+        fill CDATA #REQUIRED
+        d CDATA #REQUIRED>
+<!ELEMENT line EMPTY>
+<!ATTLIST line
+        stroke CDATA #REQUIRED
+        stroke-width CDATA #REQUIRED
+        x1 CDATA #REQUIRED
+        y1 CDATA #REQUIRED
+        x2 CDATA #REQUIRED
+        y2 CDATA #REQUIRED>
+<!ELEMENT polyline EMPTY>
+<!ATTLIST polyline
+        fill CDATA #REQUIRED
+        points CDATA #REQUIRED>
+<!ELEMENT polygon EMPTY>
+<!ATTLIST polygon
+        fill CDATA #REQUIRED
+        points CDATA #REQUIRED>
+<!ELEMENT ellipse EMPTY>
+<!ATTLIST ellipse
+        fill CDATA #REQUIRED
+        cx CDATA #REQUIRED
+        cy CDATA #REQUIRED
+        rx CDATA #REQUIRED
+        ry CDATA #REQUIRED>
+]>
+
+
+<svg version="1.1" width="500" height="400">
+<rect x="25" y="10" width="200" height="100" fill="orange" stroke="blue" stroke-width="3" />
+<rect x="225" y="25" width="50" height="85" fill="blue" stroke="red" stroke-width="8" />
+<circle cx="70" cy="110" r="25" fill="green" stroke="red"/>
+<circle cx="220" cy="110" r="25" fill="green" stroke="red"/>
+<path fill="pink" d="M 316 9 L 396 9 L 359 46 L 359 94 C 359 94 357 100 384 102
+L 384 103 L 331 103 L 331 102 C 356 100 354 94 354 94
+L 354 46 L 316 9 z " />
+<line stroke="green" stroke-width="8" x1="25" y1="150" x2="400" y2="150" />
+<polyline fill="red" points="20, 250 85, 350 120, 350" />
+<polygon fill="green" points="250,250 297, 284 279,340 220, 340 202, 284" />
+<ellipse fill="blue" cx="400" cy="300" rx="72" ry="50"/>
+</svg>

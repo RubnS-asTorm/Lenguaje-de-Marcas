@@ -1,0 +1,30 @@
+body {
+  background-color: powderblue;
+}
+h1 {
+  background-color: #58D3F7;
+  text-align: center;
+  font-size: 25px;
+  font: Verdana;
+  border: 1px solid blue;
+  padding: 5px;
+}
+h2 {
+  
+}
+h3 {
+  background-color: #58ACFA;
+  text-align: center;
+  font-size: 20px;
+  font: Verdana;
+  border: 1px solid blue;
+  padding: 3px;
+}
+p {
+  
+}
+.fuego {
+  text-decoration-color: red;
+  text-decoration-line: line;
+  text-decoration-style: solid;
+}

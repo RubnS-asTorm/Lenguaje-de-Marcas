@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<texto>
+ <Titulo>XML explicado a los niños</Titulo>
+ <párrafo>El <abreviatura>XML</abreviatura>define cómo crear
+ lenguajes de marcas.</párrafo>
+ <párrafo>Las marcas se añaden a un documento de texto
+ para añadir información.</párrafo>
+ <enlace xmlns="http://www.example.org"/>
+</texto>

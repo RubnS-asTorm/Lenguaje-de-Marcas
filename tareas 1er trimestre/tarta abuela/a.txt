@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<title>tarta de la abuela</title>
+		<link rel="stylesheet" href="aspecto.css">
+	</head>
+	<body>
+		<h1>Tarta de la abuela</h1>
+		<ol>
+		<li>Preparar el flan.</li>
+			<ol>
+			<li>Disolver el preparado de flan en un vaso de leche.</li>
+			<li>Poner el resto en un cazo al fuego a calentar con el azúcar.</li>
+			<li>Cuando rompa a hervir.</li>
+				<ol>
+				<li>Retirar del fuego.</li>
+				<li>Añadir la leche con el preparado de flan.</li>
+				</ol>
+			<li>Remover.
+			</ol>
+		<li>Vuelve a colocar a fuego bajo y remueve continuamente hasta que empiece a espesar.</li>
+		<li>Colocar en un molde rectangular, una primera capa de galletas mojadas en la leche.</li>
+		<li>Verter la mitad del flan y colocar otra capa de galleta. Verter la otra mitad del flan y poner una última capa de galletas . Dejar enfriar en la nevera mínimo una hora.</li>
+		<li>Poner la nata a calentar y cuando empiece a hervir retirar del fuego y añadir el chocolate. Remover hasta que esté fundido y verter por encima de la última capa de galletas.</li>
+		<li>Dejar enfriar hasta que esté cuajado, unos 30 minutos.</li>
+		</ol>
+		<h3>Ingredientes:</h3>
+		<li>200g de Chocolate Negro para postre</li>
+		<li>100ml de nata para montar</li>
+		<li>2 sobres de Preparado para flan</li>
+		<li>1 l de leche + 100ml para mojar las galletas</li>
+		<li>3 cucharadas de azúcar</li>
+		<li>450g de galletas rectangulares</li>
+		<h2>Consejos culinarios</h2>
+		<p>Decorar por encima con un poco de galleta picada</p>
+	</body>
+</html>

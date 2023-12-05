@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<Competición deporte="atletismo">
+    <Especialidad distancia  ="100m"/>
+    <Categoría tipo ="Femenino"/>
+    <Resultados>
+        <primerclasificado>
+            <país nombre="Jamaica" medalla="oro"/>
+            <nombre>Elaine Thompson</nombre>
+        </primerclasificado>
+        <segundoclasificado>
+            <país nombre="usa" medalla="plata"/>
+            <nombre>Tori Bowie</nombre>
+        </segundoclasificado>
+        <tercerclasificado>
+            <país nombre="Jamaica" medalla="bronce"/>
+            <nombre>S.Fraser-Pryce</nombre>
+        </tercerclasificado>
+    </Resultados>
+</Competición>

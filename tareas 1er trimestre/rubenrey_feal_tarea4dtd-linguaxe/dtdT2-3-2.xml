@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE departamento [
+<!ELEMENT departamento EMPTY>
+<!ATTLIST departamento nome NMTOKENS #REQUIRED>
+<!ATTLIST departamento xefe NMTOKENS #REQUIRED>
+]>
+<departamento nome="Electricidade e electrónica" xefe="Alberto"/>

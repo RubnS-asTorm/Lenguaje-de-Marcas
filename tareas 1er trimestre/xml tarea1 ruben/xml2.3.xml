@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<agenda>
+    <persona>
+        <persona nombre="Pedro" numero="111111111" apellidos="M. A." dirección="Av. A" mastelefonos="444444444"/>
+        <persona nombre="Raúl" numero="222222222" apellidos="M. B." dirección="Av. B" mastelefonos="555555555"/>
+        <persona nombre="Ana" numero="333333333" apellidos="M. C." dirección="Av. C" mastelefonos="666666666"/>
+    </persona>
+</agenda>
+   

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<SopaDeCebola>
+    <comensales cantidad="4"/>
+    <Ingredientes>
+        <producto NombreyCantidad="1 Kg de cebolas."/>
+        <producto NombreyCantidad="2 l de caldo de carne."/>
+        <producto NombreyCantidad="100 gr manteiga."/>
+        <producto NombreyCantidad="1 cullerada de fariña."/>
+        <producto NombreyCantidad="100 gr de queixo emmental suízo ou gruère raiado."/>
+        <producto NombreyCantidad="Pan torrado en rebandas."/>
+        <producto NombreyCantidad="Tomiño."/>
+        <producto NombreyCantidad="1 folla de loureiro."/>
+        <producto NombreyCantidad="Pementa."/>
+    </Ingredientes>
+    <pasos>
+        <paso número="1" proceso="Pelar e partir as cebolas en toros finos."/>
+        <paso número="2" proceso="Sofritilas coa manteiga, sal e pementa a lume lento ata que estean transparentes sen dourarse."/>
+        <paso número="3" proceso="Engadir a fariña sen deixar de remover."/>
+        <paso número="4" proceso="Poñelo nunha cazola co caldo, o tomiño e o loureiro."/>
+        <paso número="5" proceso="Deixar cocer a lume lento durante uns 15 minutos."/>
+        <paso número="6" proceso="Poñer as rebandas de pan encima, empoar o queixo e gratinar ao forno."/>
+    </pasos>
+</SopaDeCebola>

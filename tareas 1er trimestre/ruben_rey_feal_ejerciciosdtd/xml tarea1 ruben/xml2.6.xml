@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<horario>
+    <horas>
+        <primera hora="1" duración="16,20-17,10"/>
+        <segunda hora="2" duración="17,10-18,00"/>
+        <tercera hora="3" duración="18,00-18,50"/>
+        <cuarta hora="4" duración="18,50-19,40"/>
+        <qinta hora="5" duración="19,40-20,30"/>
+        <sexta hora="6" duración="20,30-21,20"/>
+        <septima hora="7" duración="21,20-22,10"/>
+        <octava hora="8" duración="22,10-23,00"/>
+    </horas>
+    <clases>
+        <lunes primera="FH" segunda="FH" tercera="PAR" cuarta="PAR" quinta="PAR" sexta="FOL" septima="FOL" octava="nada"/>
+        <martes primera="ISO" segunda="ISO" tercera="XBD" cuarta="XBD" quinta="LMSXI" sexta="LSMXI" septima="LSMXI" octava="nada"/>
+        <miercoles primera="FH" segunda="PAR" tercera="PAR" cuarta="PAR" quinta="ISO" sexta="XBD" septima="XBD" octava="XBD"/>
+        <jueves primera="ISO" segunda="ISO" tercera="PAR" cuarta="PAR" quinta="XBD" sexta="XBD" septima="XBD" octava="nada"/>
+        <viernes primera="ISO" segunda="ISO" tercera="ISO" cuarta="FOL" quinta="FOL" sexta="LMSXI" septima="LSMXI" octava="nada"/>
+    </clases>
+</horario>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE provincias [
+<!ELEMENT provincias (provincia+)>
+<!ELEMENT provincia EMPTY>
+<!ATTLIST provincia codigo ID #REQUIRED
+                     nome CDATA #REQUIRED
+                     rexion CDATA #REQUIRED>
+]>
+<provincias>
+    <provincia codigo="rec_27" nome="Lugo" rexion="Galicia" />
+    <provincia codigo="rec_32" nome="Ourense" rexion="Galicia" />
+    <provincia codigo="rec_36" nome="Pontevedra" rexion="Galicia" />
+</provincias>

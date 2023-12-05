@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE AeropuertoJFK[
+<!ELEMENT AeropuertoJFK (vuelos*)>
+<!ELEMENT vuelos (vuelo+)>
+<!ELEMENT vuelo EMPTY>
+<!ATTLIST vuelo 
+        código CDATA #REQUIRED
+        diario CDATA #IMPLIED
+        origen CDATA #REQUIRED
+        destino CDATA #REQUIRED
+        hora_salida CDATA #REQUIRED
+        hora_llegada CDATA #REQUIRED
+        estado (C|E|R) "E">
+]>
+
+<AeropuertoJFK>
+    <vuelos>
+        <vuelo código="v22" diario="SI" origen="NY" destino="Chicago" hora_salida="9:30" hora_llegada="11:30" estado="R"/>
+        <vuelo código="v23" diario="NO" origen="NY" destino="Miami" hora_salida="10:15" hora_llegada="11:15" estado="C"/>
+    </vuelos>
+</AeropuertoJFK>

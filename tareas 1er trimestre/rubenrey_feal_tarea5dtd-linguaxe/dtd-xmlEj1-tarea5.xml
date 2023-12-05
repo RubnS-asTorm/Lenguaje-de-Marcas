@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipos_de_baloncesto[
+<!ELEMENT equipos_de_baloncesto (equipo+)>
+<!ELEMENT equipo (nombre,ciudad,entrenador,jugadores)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT entrenador (#PCDATA)>
+<!ELEMENT jugadores (jugador*)>
+<!ELEMENT jugador EMPTY>
+<!ATTLIST jugador 
+        nombre CDATA #REQUIRED
+        posicion (base|escolta|alero|pivot) #REQUIRED
+        nacionalidad CDATA #REQUIRED>
+]>
+<equipos_de_baloncesto>
+    <equipo>
+        <nombre>GalizaCalidade</nombre>
+        <ciudad>Narón</ciudad>
+        <entrenador>Pepe Antonio</entrenador>
+        <jugadores>
+            <jugador nombre="Raúl" posicion="base" nacionalidad="Española"/>
+        </jugadores>
+    </equipo>
+</equipos_de_baloncesto>

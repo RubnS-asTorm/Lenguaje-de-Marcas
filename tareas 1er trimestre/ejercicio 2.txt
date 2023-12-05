@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es-ES>
+	<head>
+		<meta charset="utf-8">
+		<title>Tarefa 03</title>
+	<body>
+		<img
+  src="https://cdn-4.motorsport.com/images/mgl/6AEomeD6/s800/fernando-alonso-aston-martin-r-1.jpg"  width="400"  height="341" />
+		<img
+  src="https://images.daznservices.com/di/library/DAZN_News/f1/38/fernando-alonso-interlagos-2005_koxaatmhx5s31mu2omoyxsyu6.jpg?t=-538406268"  width="500"  height="300" />
+		<img
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLQX1zNSxqIfTdv2tTah03x0SoucUdEQFdxw&usqp=CAU"/>
+	</body>
+</html>

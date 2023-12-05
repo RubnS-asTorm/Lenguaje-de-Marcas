@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reservas[
+<!ELEMENT reservas (data, local, bonificación?, evento?, (clienteEmpresa|clientePersoal))>
+<!ATTLIST reservas
+año CDATA #REQUIRED>
+<!ELEMENT data EMPTY>
+<!ATTLIST data 
+    mes CDATA #REQUIRED
+    día CDATA #REQUIRED
+    horario (mañana|tarde|día) #REQUIRED>
+<!ELEMENT local EMPTY>
+<!ATTLIST local
+    valor (Polideportivo|Social) #REQUIRED>
+<!ELEMENT bonificación (#PCDATA)>
+<!ELEMENT evento (#PCDATA)>
+<!ELEMENT clienteEmpresa (#PCDATA)>
+<!ELEMENT clientePersoal (#PCDATA)>
+]>
+
+<reservas año="2023/24">
+    <data mes="Agosto" día="17" horario="mañana"/>
+    <local valor="Polideportivo"/>
+    <bonificación>10%</bonificación>
+    <evento>>Cumpleaños</evento>
+    <clientePersoal>Rubén Rey Feal</clientePersoal>
+</reservas>
