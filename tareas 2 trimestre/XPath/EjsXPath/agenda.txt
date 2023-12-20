@@ -1,0 +1,17 @@
+1. Nombre del propietario de la agenda.
+/agenda/propietario/identificadores/nombre
+
+2. Teléfono de casa del propietario.
+/agenda/propietario/telefonos/casa
+
+3. Nombres y apellidos de los contactos de la agenda.
+/agenda/contactos/persona/identificadores/nombre | /agenda/contactos/persona/identificadores/apellidos
+
+4. Nombre e identificador de cada contacto.
+/agenda/contactos/persona/identificadores/nombre | /agenda/contactos/persona/@id
+
+5. Datos del contacto con identificador p02.
+/agenda/contactos/persona[@id='p02']
+
+6. Identificadores de los contactos que tienen móvil.
+/agenda/contactos/persona[telefonos/movil]/@id

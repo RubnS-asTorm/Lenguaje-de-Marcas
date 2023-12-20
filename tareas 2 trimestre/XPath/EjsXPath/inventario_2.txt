@@ -1,0 +1,26 @@
+1. Extraer todos los elementos <peso> (etiqueta incluida).
+/inventario/producto/peso
+
+2. Extraer las cantidades de todos los elementos <peso> (sin la etiqueta <peso>).
+/inventario/producto/peso/text()
+
+3. Extraer el peso del último elemento.
+/inventario/producto[last()]/peso/text()
+
+4. Extraer las distintas unidades en las que se han almacenado los pesos.
+/inventario/producto/peso/@unidad
+
+5. Extraer el penúltimo codigo.
+/inventario/producto[last()-1]/@codigo
+
+6. Extraer el peso del elemento cuyo codigo sea AAA-111.
+/inventario/producto[@codigo='AAA-111']/peso/text()
+
+7. Extraer el nombre de los productos que hayan puesto el peso en gramos.
+/inventario/producto[peso/@unidad='g']/nombre/text()
+
+8. Extraer el codigo de los productos cuyo nombre sea Monitor.
+/inventario/producto[nombre='Monitor']/@codigo
+
+9. Extraer el código de los productos que pesen más de un cuarto de kilo.
+/inventario/producto[number(peso) > 0.25]/@codigo

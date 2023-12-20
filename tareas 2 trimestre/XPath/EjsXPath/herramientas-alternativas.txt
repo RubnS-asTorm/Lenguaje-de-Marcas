@@ -1,0 +1,21 @@
+Fonto
+https://xpath.playground.fontoxml.com/
+
+Xpather
+http://xpather.com/
+
+ExtendsClass Xpath Tester
+https://extendsclass.com/xpath-tester.html
+
+Free Formatter
+https://www.freeformatter.com/xpath-tester.html
+
+Xpath Online tester
+https://videlibri.de/cgi-bin/xidelcgi
+
+Y ya para instalar...
+BaseX
+https://basex.org/
+
+eXistDB
+http://exist-db.org
