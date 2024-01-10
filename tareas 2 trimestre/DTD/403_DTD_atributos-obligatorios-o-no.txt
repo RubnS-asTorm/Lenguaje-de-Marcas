@@ -1,0 +1,17 @@
+Consideremos el siguiente documento XML:
+
+<biblioteca>
+  <libro codigo="123" ubicacion="estantería 1">
+    <autor>Miguel de Cervantes Saavedra</autor>
+    <titulo>El Quijote de la Mancha</titulo>
+  </libro>
+  <libro codigo="1023" ubicacion="estantería 3">
+    <autor>Pablo Neruda</autor>
+    <titulo>Veinte poemas de amor y una canción desesperada</titulo>
+  </libro>
+</biblioteca>
+
+Elabora un documento DTD que permita validar la estructura del documento XML anterior, teniendo en cuenta los siguientes aspectos:
+1) La biblioteca puede tener un libro o más.
+2) El atributo codigo es obligatorio.
+3) El atributo ubicacion no es obligatorio.

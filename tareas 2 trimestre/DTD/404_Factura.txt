@@ -1,0 +1,44 @@
+Consideremos el siguiente documento XML:
+
+<factura id="876">
+  <emision>2012-02-28T08:25:02</emision>
+  <vendedor id="12">
+    <nombre>Felipe Cuesta Pérez</nombre>    
+  </vendedor>
+  <cliente id="9878">
+    <nombre>Raquel Rengo Suárez</nombre>
+    <direccion>
+      <via>Calle Alonso Cano, 2, 3º A</via>
+      <cp>41700</cp>
+      <localidad>Dos Hermanas</localidad>
+      <provincia>Sevilla</provincia>
+    </direccion>
+    <telefono num="666111666"/>
+    <telefono num="954666111"/>
+  </cliente>
+  <articulo id="121" iva="18">
+    <denominacion>Silla giratoria modelo C-121</denominacion>
+    <precio>98.23</precio>
+    <cantidad>1</cantidad>
+  </articulo>
+  <articulo id="9341" iva="18">
+    <denominacion>Mesa estudio 120x80 haya modelo A2-456-X</denominacion>
+    <precio>193.23</precio>
+    <cantidad>1</cantidad>
+  </articulo>
+  <articulo id="1124" iva="18">
+    <denominacion>Lámpara mesa con pantalla naranja modelo AK-987</denominacion>
+    <precio>23.12</precio>
+    <cantidad>2</cantidad>    
+  </articulo>
+  <descuento>20</descuento>
+</factura>
+
+Elabora un documento DTD que permita validar la estructura del documento XML anterior, teniendo en cuenta los siguientes aspectos:
+1) Toda factura tiene un identificador obligatorio.
+2) Los elementos emision, vendedor, cliente y articulo son obligatorios, mientras que descuento es opcional.
+3) El elemento articulo puede aparecer varias veces. Los demás sólo una vez.
+4) vendedor tiene el atributo obligatorio id y debe contener obligatoriamente un elemento nombre.
+5) cliente tiene el atributo obligatorio id y contiene los elementos nombre, direccion y teléfono.
+6) nombre y direccion son obligatorios, mientras que telefono es opcional y además puede aparecer más de una vez.
+7) Cada articulo tiene los atributos obligatorios id e iva y los elementos obligatorios denominacion, precio y cantidad.

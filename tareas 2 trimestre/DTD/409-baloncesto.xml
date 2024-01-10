@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipos_de_baloncesto [
+<!ELEMENT equipos_de_baloncesto (equipo)+>
+<!ELEMENT equipo (nombre,ciudad,entrenador,jugadores)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT entrenador (#PCDATA)>
+<!ELEMENT jugadores (jugador)>
+<!ELEMENT jugador (nombre,posicion,nacionalidad)>
+<!ELEMENT posicion (#PCDATA)>
+<!ELEMENT nacionalidad (#PCDATA)>
+<!ATTLIST posicion
+          tipo (base|escolta|alero|pivot) #REQUIRED>
+]>
+
+<equipos_de_baloncesto>
+    <equipo>
+        <nombre>
+            
+        </nombre>
+        <ciudad>
+            
+        </ciudad>
+        <entrenador>
+            
+        </entrenador>
+        <jugadores>
+            <jugador>
+                <nombre>
+                    
+                </nombre>
+                <posicion tipo="base"/>
+                <nacionalidad></nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+    <equipo>
+        <nombre>
+            
+        </nombre>
+        <ciudad>
+            
+        </ciudad>
+        <entrenador>
+            
+        </entrenador>
+        <jugadores>
+            <jugador>
+                <nombre>
+                    
+                </nombre>
+                <posicion tipo="alero"/>
+                <nacionalidad></nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+</equipos_de_baloncesto>
+
+<!--
+Escribe un documento XML que permita guardar la información de dos equipos de baloncesto y su correspondiente documento DTD que permita su validación.
+
+El nodo raíz del documento XML será equipos_de_baloncesto, el cual contendrá dos elementos equipo.
+
+De cada equipo, se debe almacenar:
+* nombre
+* ciudad
+* entrenador
+* jugadores
+
+De cada jugador, se debe guardar:
+* nombre
+* posicion: deberá representarse mediante un atributo y sus valores pueden ser (Base, Escolta, Alero o Pivot).
+* nacionalidad
+-->

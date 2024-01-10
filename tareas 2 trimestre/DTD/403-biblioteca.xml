@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+<!ELEMENT biblioteca (libro+)>
+<!ELEMENT libro (autor,titulo)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ATTLIST libro
+          codigo CDATA #REQUIRED
+          ubicacion CDATA #IMPLIED>
+]>
+
+<biblioteca>
+  <libro codigo="123" ubicacion="estantería 1">
+    <autor>Miguel de Cervantes Saavedra</autor>
+    <titulo>El Quijote de la Mancha</titulo>
+  </libro>
+  <libro codigo="1023" ubicacion="estantería 3">
+    <autor>Pablo Neruda</autor>
+    <titulo>Veinte poemas de amor y una canción desesperada</titulo>
+  </libro>
+</biblioteca>
+
