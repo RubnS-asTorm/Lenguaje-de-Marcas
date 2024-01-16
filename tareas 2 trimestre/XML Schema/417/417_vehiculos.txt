@@ -1,0 +1,33 @@
+Elabora un documento XSD que permita validar el siguiente documento XML:
+
+<vehiculos>
+  <vehiculo>
+    <nombre>Count Zero</nombre>
+    <modelo>Series I, 80"</modelo>
+    <fabricacion>
+      <inicio>
+        <dia>21</dia>
+        <mes>07</mes>
+        <anyo>1949</anyo>
+      </inicio>
+      <fin>
+        <dia>09</dia>
+        <mes>08</mes>
+        <anyo>1949</anyo>
+      </fin>
+    </fabricacion>
+    <modificaciones>
+      <modificacion>Cambiar motor</modificacion>
+      <modificacion>Cambiar embrague</modificacion>
+      <modificacion>Cambio aceite</modificacion>
+    </modificaciones>
+  </vehiculo>
+</vehiculos>
+
+Algunas consideraciones:
+
+Los elementos <vehiculo>, <nombre> y <modificacion> deben aparecer mínimo una vez y el máximo no está limitado. El resto de los elementos deben aparecer 1 vez.
+Todos los elementos que aparecen en el documento XML son obligatorios y deben aparecer siempre en el mismo orden.
+El elemento <dia> consta siempre de 2 cifras. Los valores permitidos son números enteros entre 01 y 31.
+El elemento <mes> consta siempre de 2 cifras. Los valores permitidos son números enteros entre 01 y 12.
+El elemento <anyo> consta siempre de 4 cifras. Los valores permitidos son números enteros entre 1900 y 2099.

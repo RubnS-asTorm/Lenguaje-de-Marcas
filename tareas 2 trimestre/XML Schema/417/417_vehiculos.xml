@@ -1,0 +1,25 @@
+<vehiculos 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+  xs:noNamespaceSchemaLocation="417-terminado.xsd">
+  <vehiculo>
+    <nombre>Count Zero</nombre>
+    <modelo>Series I, 80"</modelo>
+    <fabricacion>
+      <inicio>
+        <dia>21</dia>
+        <mes>07</mes>
+        <anyo>1949</anyo>
+      </inicio>
+      <fin>
+        <dia>09</dia>
+        <mes>08</mes>
+        <anyo>1949</anyo>
+      </fin>
+    </fabricacion>
+    <modificaciones>
+      <modificacion>Cambiar motor</modificacion>
+      <modificacion>Cambiar embrague</modificacion>
+      <modificacion>Cambio aceite</modificacion>
+    </modificaciones>
+  </vehiculo>
+</vehiculos>

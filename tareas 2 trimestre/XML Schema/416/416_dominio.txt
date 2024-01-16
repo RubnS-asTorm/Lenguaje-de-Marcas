@@ -1,0 +1,28 @@
+Elabora un documento XSD que permita validar el siguiente documento XML:
+
+<dominio>w3c.org</dominio>
+
+Se debe verificar que el contenido de <dominio> es un nombre de dominio válido.
+
+Un dominio está formado por 2 partes:
+
+dominio.tld
+
+Donde:
+
+dominio es un nombre de dominio de segundo nivel. Por ejemplo: w3c, wikipedia, google, etc.
+tld es un nombre de dominio de primer nivel (TLD). Por ejemplo: com, net, es, etc.
+Caracteres válidos para el nombre de un dominio de segundo nivel son:
+
+Letras minúsculas.
+Números.
+Guión medio (-).
+Un nombre de dominio de segundo nivel:
+
+Puede combinar los caracteres válidos de cualquier forma con la única restricción de que el guión medio no puede ser ni el primer ni el último caracter.
+La cadena de texto debe tener un mínimo de 2 caracteres.
+La cadena de texto no puede superar los 63 caracteres.
+Los dominios de primer nivel:
+
+Solo pueden utilizar letras minúsculas.
+Pueden tener una longitud de 2 o 3 caracteres.

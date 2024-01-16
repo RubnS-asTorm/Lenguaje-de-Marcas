@@ -1,0 +1,31 @@
+Un cine utiliza un fichero XML para almacenar las películas que tiene en cartelera.
+
+Para cada película, se guarda la siguiente información:
+Código identificativo (atributo).
+Duración (atributo).
+Año de publicación (atributo).
+Título de la película.
+Título original, en el caso de la película sea extrangera.
+País se producción.
+Los géneros a los que pertenece.
+Clasificación de edad o si está sin clasificar.
+Sinopsis.
+Director o directora.
+Reparto (actores y actrices).
+Web.
+URL de IMDb.
+Nombre del fichero que contiene el cartel de la película.
+
+
+Escribe un XML Schema para validar el tipo de documento XML descrito, eligiendo los tipos de datos más apropiados y teniendo en cuenta que:
+1) En cada documento, hay una película o más.
+2) Los atributos codigo, duracion y ano son atributos obligatorios.
+3) El atributo codigo es un identificador único en todo el documento.
+4) Los elementos <titulo-original> y <web> son elementos opcionales. El resto son obligatorios.
+5) En la lista de géneros, por lo menos, tiene que haber uno.
+6) Si no se usa <clasificacion>, se debe utilizar <sin-clasificar />. Uno de ellos tiene que estar presente siempre, pero no pueden estarlo a la vez.
+7) En el caso de estar presente <clasificacion>, el atributo edad es obligatorio.
+8) El atributo edad es un valor numérico. Se utiliza 0 para indicar que es para todos los públicos.
+9) El elemento <director> puede substituirse por <directora>, pero solo puede aparecer una vez cada uno y no simultáneamente.
+10) El reparto está formado por actores y atrices. Como mínimo, debe haber un <actor> o <actriz>.
+11) Los valores de <imdb> y web son URLs. Se debe validar que empiecen por http:// o https://. Es necesario tener en cuenta que se puede escribir en mayúsculas, minúsculas o de forma combinada (mezclando minúsculas con mayúsculas).

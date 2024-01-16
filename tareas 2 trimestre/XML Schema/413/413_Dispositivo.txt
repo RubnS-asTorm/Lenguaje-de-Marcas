@@ -1,0 +1,5 @@
+Elabora un documento XSD que permita validar el siguiente documento XML:
+
+<dispositivo>conectado</dispositivo>
+
+El contenido del elemento <dispositivo> solo puede tomar dos valores: conectado u ocupado
