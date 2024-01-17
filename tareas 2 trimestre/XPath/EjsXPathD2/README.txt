@@ -1,1 +1,0 @@
-Los ejercicios en blanco o con multiples respuestas son porq no supe hacerlos de ninguna forma o las respuestas que contiene van mal (ejs 21 y 22)
