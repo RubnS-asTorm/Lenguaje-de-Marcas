@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="vehiculos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vehiculo" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string" minOccurs="1"/>
+                            <xs:element name="modelo" type="xs:string"/>
+                            <xs:element name="fabricacion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="inicio">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="dia" type="tipodia"/>
+                                                    <xs:element name="mes" type="tipomes"/>
+                                                    <xs:element name="anyo" type="tipoanyo"/> 
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="fin">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="dia" type="tipodia"/>
+                                                    <xs:element name="mes" type="tipomes"/>
+                                                    <xs:element name="anyo" type="tipoanyo"/> 
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element> 
+                                    </xs:sequence>
+                                </xs:complexType>                        
+                            </xs:element>
+                            <xs:element name="modificaciones">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="modificacion" minOccurs="1" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="tipodia">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:pattern value="[0-9]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+        <xs:simpleType name="tipomes">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:pattern value="[0-9]{2}"/>
+            <xs:maxInclusive value="31"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipoanyo">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:pattern value="[0-9]{4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
