@@ -1,0 +1,45 @@
+#1
+//empresa/departamento/empregado/nome
+#2
+//nome
+#3
+//empregado/nome
+#4
+//salario
+//empregado/salario
+//empresa/departamento/empregado/salario
+#5
+//empresa/departamento/empregado/*
+#6
+/*/*/*/nome
+#7
+//empresa/departamento/@cod_dep
+#8
+//empresa/departamento/empregado [salario > 4000]
+#9
+//departamento [@cod_dep= "publ"]/empregado/nome
+#10
+//departamento [@cod_dep= "cont"]/empregado/dni
+#11
+//departamento [last()-1]/empregado/dni
+#12
+//empregado[string-length(nome) <5 ]/nome
+#13
+//empregado[starts-with(nome,'X')]/nome
+#14
+count(//departamento)
+#15
+count(//departamento/empregado)
+#16
+//departamento[count(empregado)<3]/@cod_dep
+#17
+
+#18
+
+#19
+
+#20
+
+#21
+
+#22
