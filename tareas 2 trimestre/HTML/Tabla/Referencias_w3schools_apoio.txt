@@ -1,0 +1,8 @@
+https://www.w3schools.com/html/html_tables.asp
+https://www.w3schools.com/html/html_table_borders.asp
+https://www.w3schools.com/html/html_table_sizes.asp
+https://www.w3schools.com/html/html_table_headers.asp
+https://www.w3schools.com/html/html_table_padding_spacing.asp
+https://www.w3schools.com/html/html_table_colspan_rowspan.asp
+https://www.w3schools.com/html/html_table_styling.asp
+https://www.w3schools.com/html/html_table_colgroup.asp

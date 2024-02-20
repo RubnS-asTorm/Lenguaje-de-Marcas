@@ -1,0 +1,16 @@
+El formulario debe contener los siguientes campos:
+* El nombre: con un control de tipo texto.
+* Los apellidos: con un control de tipo texto.
+* El género: con tres opciones excluyentes (masculino, femenino, no binario).
+* La fecha de nacimiento: tres campos desplegables. Para el desplegable de los años, indica 10 opciones cualquiera.
+* Los módulos de ASIR: se pueden seleccionar varios.
+* Los estudios previos: área de texto.
+* Un botón de envío.
+* Un botón de reinicio de todo el formulario.
+
+Además, tienes que tener en cuenta los siguientes requisitos:
+* El título de la página debe ser Matrícula ASIR.
+* El texto Matrícula ASIR como encabezado de nivel 1.
+* El método de envío del formulario debe ser POST.
+* El destino del envío del formulario debe ser registro.php.
+* Cada campo debe tener una etiqueta (label) asociada para mejorar la usabilidad y accesibilidad.
