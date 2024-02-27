@@ -1,0 +1,43 @@
+
+CONSULTAS XQUERY PARA SIMULACRO
+Tiempo estimado: 2 horas
+
+1. El modelo de las impresoras de tipo láser.
+for $impresora in doc("impresoras.xml") /impresoras/impresora return <impresora tipo="láser">{ $impresora }</impresora>
+
+2. La marca y modelo (separados por un espacio en blanco) de las impresoras con más de un tamaño.
+for $impresora in doc("impresoras.xml") /impresoras/impresora[count(tamano) >= 2] return <impresora><marca>{ $impresora/marca/text() }</marca> - <modelo>{ $impresora/modelo/text() }</modelo></impresora>
+
+3. La marca y modelo (separados por un espacio en blanco) de las impresoras con tamaño A3 (pueden tener otros).
+for $impresora in doc("impresoras.xml") /impresoras/impresora[tamano = "A3"] return <impresora><marca>{ $impresora/marca/text() }</marca> - <modelo>{ $impresora/modelo/text() }</modelo></impresora>
+
+4. La marca y modelo (separados por un espacio en blanco) de las impresoras con tamaño A3 como único tamaño.
+for $impresora in doc("impresoras.xml") /impresoras/impresora[tamano = "A3" and count(tamano) = 1] return <impresora><marca>{ $impresora/marca/text() }</marca> - <modelo>{ $impresora/modelo/text() }</modelo></impresora>
+
+5. El modelo de las impresoras en red.
+for $impresora in doc("impresoras.xml") /impresoras/impresora[enred] return <impresora><modelo>{ $impresora/modelo/text() }</modelo></impresora>
+
+6. La cantidad de impresoras guardadas en el fichero XML.
+for $impresora in doc("impresoras.xml") /impresoras return <impresoras>{$impresora/count(impresora)}</impresoras>
+
+7. Las impresoras (elementos <impresora>) compradas en 2018 o después. Los resultados se deben ordenar por año de compra (orden ascendente).
+for $impresora in doc("impresoras.xml") /impresoras/impresora[@compra<= 2018] return <impresora><marca>{$impresora/marca/text()}</marca> - <modelo>{$impresora/modelo/text()}</modelo></impresora>
+
+8. Las impresoras (elementos <impresora>) con un peso igual o superior a 5 kg.
+for $impresora in doc("impresoras.xml") /impresoras/impresora[peso >= 5] return <impresora>{$impresora}</impresora>
+
+9. Las impresoras (elementos <impresora>) que tienen cartucho con código C-456P.
+for $impresora in doc("impresoras.xml") /impresoras/impresora[cartucho = "C-456P"] return <impresora>{$impresora}</impresora>
+
+
+
+10. La impresora (elemento <impresora>) más pesada.
+for $impresora in doc("impresoras.xml") /impresoras/impresora[max(peso)] return <impresora>{$impresora}</impresora>
+
+
+Consideraciones para el examen
+Recordad que en el examen os dejaré consultar vuestros ejercicios y acceso a internet (pero no ChatGPT/inteligencias/trabajo en equipo).
+
+La principal dificultad estriba por tanto en el tiempo. Es necesario que conozcáis el funcionamiento en general de las consultas Xquery para así tener tiempo para buscar sólo aquellas cuestiones en las que tengáis dudas.
+
+EXTRA. Una pregunta del examen será pasar el XML a formato HTML. Por ejemplo, ¿sabrías crear una tabla (o lista) con el número de serie, marca y modelo de las impresoras? 
