@@ -1,0 +1,27 @@
+Escribe las consultas XQuery que permitan obtener la siguiente información:
+1. Una lista que contiene, para cada receta, el elemento <titulo> de la receta y un elemento <calorias> que contenga el número de calorías.
+for $x in doc("recetas.xml") /recetas/receta return <receta><titulo>{$x/titulo/text()}</titulo> - <nutricion>{$x/nutricion/@caloria}</nutricion></receta>
+
+2. Una lista similar a la primera, ordenada según las calorías.
+for $receta in doc("recetas.xml") /recetas/receta order by xs:integer($receta/nutricion/@caloria) return <receta> <titulo> { $receta/titulo/text() } </titulo> <calorias> { $receta/nutricion/@caloria } </calorias> </receta>
+
+3. Una lista similar a la primera, ordenada alfabéticamente según el título.
+for $receta in doc("recetas.xml")/recetas/receta order by ($receta/titulo/text()) return <receta> <titulo> { $receta/titulo/text() } </titulo> <calorias> { $receta/nutricion/@caloria } </calorias> </receta>
+
+4. Una lista similar a la primera, ordenada según el contenido de grasa.
+for $receta in doc("recetas.xml")/recetas/receta order by xs:integer($receta/nutricion/@grasa) return <receta> <titulo>{ $receta/titulo/text() }</titulo> <nutricion>{ $receta/nutricion/@grasa }</nutricion> </receta>
+
+5. Una lista similar a la primera, con el título como atributo y las calorías como contenido.
+for $receta in doc("recetas.xml") /recetas/receta return <receta titulo="{ $receta/titulo }">{ $receta/nutricion/@caloria }</receta>
+
+6. Una lista que contenga para cada receta, el título como atributo y cada uno de los ingredientes de nivel superior (sin añadir los ingredientes que están dentro de otros ingredientes). 
+for $receta in doc ("recetas.xml") /recetas/receta return <receta titulo="{ $receta/titulo }"> { $receta/ingrediente[not(ingrediente)] } </receta>
+
+7. Una lista con cada una de las recetas que contengan el ingrediente harina. Poner el título de la receta como atributo del elemento receta.
+for $receta in doc ("recetas.xml")/recetas/receta[ingrediente[@nombre ="harina"]]
+return <receta titulo="{ $receta/titulo }">{ $receta/ingrediente[@nombre = "harina"] }</receta>
+
+8. Una lista de todas aquellas recetas que tengan un ingrediente llamado relleno y este contenga en su interior más de 5 elementos ingrediente. 
+* La lista resultante estará formada por elementos receta que contienen un atributo titulo con el valor del elemento titulo de la receta. 
+* Además, dentro de cada elemento receta habrá elementos ingrediente con el nombre de cada uno de los ingredientes.
+for $receta in doc("recetas.xml") /recetas/receta[ingrediente[@nombre = "relleno" and count(ingrediente) > 5]] return <receta titulo="{ $receta/titulo }"> { $receta/ingrediente/(@cantidad, @unidad) } </receta>
