@@ -1,0 +1,37 @@
+Escribe las consultas XQuery que permitan obtener la siguiente información:
+1. cada uno de los nombres de las categorias con la etiqueta "categoria".
+for $tutoriales in doc("tutoriales.xml") /tutoriales/tutorial/categoria return data($tutoriales)
+
+2. los titulos de los tutoriales con el número de visitas entre paréntesis, ambos dentro de la misma etiqueta "lostutoriales".
+for $tutoriales in doc("tutoriales.xml") /tutoriales/tutorial return <tutoriales lostutoriales="{$tutoriales/titulo/text()} ({$tutoriales/visitas/text()})"></tutoriales>
+
+3. los nombres de los tutoriales con menos de 2000 visitas
+for $tutoriales in doc("tutoriales.xml") /tutoriales/tutorial[visitas<2000] return $tutoriales/titulo/text()
+
+4. los nombres de los tutoriales de XML con más de 30.000 visitas
+for $tutoriales in doc("tutoriales.xml") /tutoriales/tutorial[visitas>30000 and categoria="XML"] return $tutoriales/titulo/text()
+
+5. el número total de visitas
+sum(for $tutoriales in doc("tutoriales.xml")/tutoriales/tutorial return $tutoriales/visitas)
+
+6. los nombres de las categorías distintas, cada una en una etiqueta <categoriadistintas>
+distinct-values(for $tutoriales in doc("tutoriales.xml") /tutoriales/tutorial/categoria/text() return <categoriadistintas> {$tutoriales} </categoriadistintas>)
+
+7. nombres y apellidos de los autores eliminando los repetidos y acompañar cada nombre con todos sus tutoriales, ordenados alfabeticametne por nombre de autor; cada autor en una etiqueta <autor> que contendrá una etiqueta <nombreyapellidos> y una etiqueta <titulo>.
+distinct-values(for $tutoriales in doc("tutoriales.xml") /tutoriales/tutorial/autor return {$tutoriales/autor/nombre/text()} and {$tutoriales/autor/apellidos/text()} )
+
+8. la media de vistas de los tutoriales, dentro de una etiqueta <media>.
+
+
+9. cuantos tutoriales de XML hay, dentro de una etiqueta <totaltutoriales>.
+
+
+10. el nombre del tutorial y su categoría, ordenado por el nombre de cada categoría
+
+
+11. todos los datos de cada tutorial excepto las visitas.
+
+
+12. En una tabla de HTML de dos columnas, el título de los tutoriales y los nombres de los autores.
+
+
