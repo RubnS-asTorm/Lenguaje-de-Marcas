@@ -1,0 +1,139 @@
+1. Los usuarios (elementos <usuario>) con identificador igual o inferior a 20.
+for $usuario in doc("Usuarios.xml") /usuarios/usuario[id <= 20] return $usuario
+
+2. Los usuarios (elementos <usuario>) que tienen una edad entre 20 y 30 (incluidos).
+for $usuario in doc("Usuarios.xml") /usuarios/usuario[edad > 20 and edad < 30] return $usuario
+
+3. Los usuarios (elementos <usuario>) de España (ES) e Italia (IT).
+for $usuario in doc("Usuarios.xml") /usuarios/usuario[pais = "ES" or pais = "IT"] return $usuario
+
+4. Los usuarios (elementos <usuario>) que tiene un email con extensión .com.
+for $usuario in doc("Usuarios.xml") /usuarios/usuario[ends-with(email,'.com')] return $usuario
+
+5. Los usuarios (elementos <usuario>) que tienen un nombre de 5 caracteres o menos.
+for $usuario in doc("Usuarios.xml") /usuarios/usuario[string-length(nombre)<5]/nombre/text() return $usuario
+
+6. El nombre y apellidos (separados por un espacio en blanco) de los usuarios de francia (FR).
+for $usuario in doc("Usuarios.xml") /usuarios/usuario[pais="FR"] return concat($usuario/nombre/text(), " ", $usuario/apellido/text())
+
+7. La lista completa de los países (códigos de 2 letras mayúsculas) de los usuarios almacenados en el documento XML. Los países no deben aparecer repetidos.
+distinct-values( for $usuario in doc("Usuarios.xml") /usuarios/usuario return $usuario/pais/text())
+
+8. Los usuarios (elementos <usuario>) con identificador superior a 50 y con edad igual o inferior a 80 años.
+for $usuario in doc("Usuarios.xml") /usuarios/usuario[id > 50 and edad <= 80] return $usuario
+
+9. La media de edad de los usuarios.
+avg(for $usuario in doc("Usuarios.xml") /usuarios/usuario return $usuario/edad)
+
+10. De XML a HTML. Genera una tabla HTML:
+* con dos columnas
+** en una se muestra el usuario
+** en otra se muestra la ip
+
+for $usuario in doc("Usuarios.xml") /usuarios/usuario return <table border="1" width="200px" height="auto"><tr><td>{$usuario/nombre}</td> <td>{$usuario/ip}</td></tr></table>
+------------------------------------------------------------
+
+<table border="1" width="200px" height="auto"><tr><td><nombre>Linzy</nombre></td><td><ip>148.202.79.57</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Robers</nombre></td><td><ip>7.14.19.179</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Ferguson</nombre></td><td><ip>1.82.152.168</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Minni</nombre></td><td><ip>222.240.225.206</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Thatcher</nombre></td><td><ip>10.159.77.138</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Lynna</nombre></td><td><ip>249.117.170.24</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Donny</nombre></td><td><ip>180.239.176.18</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Katerine</nombre></td><td><ip>213.179.15.120</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Stacee</nombre></td><td><ip>228.172.91.152</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Scottie</nombre></td><td><ip>188.160.168.108</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Ferrel</nombre></td><td><ip>19.104.233.216</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Paloma</nombre></td><td><ip>236.75.131.94</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Shaina</nombre></td><td><ip>221.41.195.108</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Christophorus</nombre></td><td><ip>35.63.216.244</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Keeley</nombre></td><td><ip>86.50.167.118</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Cole</nombre></td><td><ip>142.12.137.60</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Dennie</nombre></td><td><ip>135.244.200.82</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Nevsa</nombre></td><td><ip>89.133.224.126</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Callean</nombre></td><td><ip>107.148.158.181</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Amelie</nombre></td><td><ip>155.173.188.190</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Maximilianus</nombre></td><td><ip>0.49.248.195</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Veradis</nombre></td><td><ip>49.140.53.246</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Reagen</nombre></td><td><ip>116.219.50.171</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Madeline</nombre></td><td><ip>144.247.205.180</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Mab</nombre></td><td><ip>81.88.189.119</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Minny</nombre></td><td><ip>93.164.165.130</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Burr</nombre></td><td><ip>174.46.79.53</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Brittani</nombre></td><td><ip>211.34.93.250</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Wildon</nombre></td><td><ip>30.175.220.205</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Sabine</nombre></td><td><ip>213.126.85.82</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Ivory</nombre></td><td><ip>66.217.104.166</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Terrye</nombre></td><td><ip>23.177.19.230</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Shantee</nombre></td><td><ip>131.235.163.139</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Cal</nombre></td><td><ip>111.34.238.249</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Orv</nombre></td><td><ip>224.157.35.4</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Rozalie</nombre></td><td><ip>61.123.76.157</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Alfy</nombre></td><td><ip>116.62.204.69</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Malynda</nombre></td><td><ip>130.2.124.163</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Lesley</nombre></td><td><ip>231.243.199.205</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Dorie</nombre></td><td><ip>228.106.189.158</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Euell</nombre></td><td><ip>6.198.27.177</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Jamie</nombre></td><td><ip>43.28.52.246</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Lothaire</nombre></td><td><ip>71.228.32.248</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Germana</nombre></td><td><ip>183.231.212.195</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Gram</nombre></td><td><ip>87.149.183.207</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Delphine</nombre></td><td><ip>5.34.176.140</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Freddy</nombre></td><td><ip>44.120.80.41</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Elfreda</nombre></td><td><ip>15.123.83.80</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Marc</nombre></td><td><ip>239.170.171.123</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Venus</nombre></td><td><ip>39.197.109.229</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Tiffany</nombre></td><td><ip>114.62.232.216</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Meir</nombre></td><td><ip>176.74.140.22</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Lacey</nombre></td><td><ip>66.81.18.239</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Henrieta</nombre></td><td><ip>83.204.145.199</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Danit</nombre></td><td><ip>49.183.50.166</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Ryon</nombre></td><td><ip>217.13.90.158</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Rafaelia</nombre></td><td><ip>76.248.176.246</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Carolann</nombre></td><td><ip>146.6.215.17</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Jelene</nombre></td><td><ip>133.186.217.237</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Hermia</nombre></td><td><ip>216.47.80.220</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Myrah</nombre></td><td><ip>73.147.17.195</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Ninette</nombre></td><td><ip>104.162.99.53</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Jasmin</nombre></td><td><ip>22.114.208.117</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Bren</nombre></td><td><ip>53.140.207.129</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Nicolle</nombre></td><td><ip>48.54.3.136</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Florencia</nombre></td><td><ip>215.122.2.144</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Laureen</nombre></td><td><ip>249.175.45.87</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Shawn</nombre></td><td><ip>185.84.0.55</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Romonda</nombre></td><td><ip>104.139.27.62</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Gunner</nombre></td><td><ip>112.41.200.145</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Marianna</nombre></td><td><ip>89.146.12.42</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Robena</nombre></td><td><ip>57.251.255.35</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Mignonne</nombre></td><td><ip>114.75.157.172</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Sauveur</nombre></td><td><ip>108.188.59.219</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Van</nombre></td><td><ip>55.78.200.53</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Cyndi</nombre></td><td><ip>215.77.237.170</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Idalina</nombre></td><td><ip>208.114.56.123</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Jordon</nombre></td><td><ip>37.237.70.93</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Alden</nombre></td><td><ip>59.191.84.96</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Rosamund</nombre></td><td><ip>3.24.20.23</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Chlo</nombre></td><td><ip>38.252.137.230</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Westley</nombre></td><td><ip>176.192.216.101</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Keene</nombre></td><td><ip>88.222.239.65</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Melly</nombre></td><td><ip>244.74.12.164</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Betti</nombre></td><td><ip>87.230.186.186</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Danya</nombre></td><td><ip>234.102.10.156</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Ezequiel</nombre></td><td><ip>144.227.94.172</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Hedda</nombre></td><td><ip>206.28.66.221</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Ruthi</nombre></td><td><ip>43.75.220.207</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Kathryn</nombre></td><td><ip>112.128.225.78</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Sherri</nombre></td><td><ip>161.173.75.197</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Gibb</nombre></td><td><ip>134.106.94.40</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Darlene</nombre></td><td><ip>146.50.141.255</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Sioux</nombre></td><td><ip>245.84.66.224</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Giacobo</nombre></td><td><ip>30.211.42.34</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Kelcey</nombre></td><td><ip>112.185.32.243</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Aleece</nombre></td><td><ip>175.250.128.106</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Marv</nombre></td><td><ip>242.184.129.184</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Leora</nombre></td><td><ip>240.206.20.117</ip></td></tr></table>
+<table border="1" width="200px" height="auto"><tr><td><nombre>Cirillo</nombre></td><td><ip>62.162.174.159</ip></td></tr></table>
+
+------------------------------------------------------------
+
+Comentarios u observaciones
