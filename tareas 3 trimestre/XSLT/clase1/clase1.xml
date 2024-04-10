@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="file:/E:/clase/linguaxe%20de%20marcas/ejercicios%20casa/tareas%203er%20trimestre/XSLT/clase1/clase1xsl.xsl"?>
+<inventario>
+    <producto codigo="P1">
+	<nombre>tarta de chocolate</nombre>
+        <peso unidad="kg">1,5</peso>
+        <precio>15€</precio>
+	<unidades> 4 ud </unidades>
+    </producto>
+    <producto codigo="P2">
+        <nombre>pastelitos</nombre>
+        <peso unidad='g'>100</peso>
+        <precio>2.50€</precio>
+	<unidades> 15 ud </unidades>
+    </producto>
+    <producto codigo="P3">
+        <nombre>bollas</nombre>
+        <peso unidad='kg'>2</peso>
+        <precio>18€</precio>
+	<unidades> 7 ud </unidades>
+    </producto>
+    <producto codigo="P4">
+        <nombre>bombones</nombre>
+        <peso unidad='g'>10</peso>
+        <precio>1,50€</precio>
+	<unidades> 52 ud </unidades>
+    </producto>
+</inventario>
